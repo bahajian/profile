@@ -23,7 +23,7 @@ jobs:
         context: .
         push: true
         #tags: bahajian/file.upload:latest, bahajian/file.upload:${{github.run_number}}, bahajian/file.upload:${{github.run_id}}
-        tags: bahajian/file.upload:${{github.action_ref}}
+        tags: bahajian/file.upload:RUN#${{github.run_number}}
 
 
 
