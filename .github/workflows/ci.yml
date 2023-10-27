@@ -51,7 +51,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: "app:latest"
+        tags: profile:latest
 
 # id: meta
 #   uses: docker/metadata-action@v4
