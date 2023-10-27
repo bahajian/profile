@@ -51,7 +51,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: profile:latest
+        tags: ${{ steps.meta.outputs.tags }}
 
 # id: meta
 #   uses: docker/metadata-action@v4
