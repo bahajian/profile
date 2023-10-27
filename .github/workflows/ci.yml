@@ -27,9 +27,12 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v5
       with:
-        context: "{{defaultContext}}:mysubdir"
+        context: .
         push: true
-        tags: ${{ steps.meta.outputs.tags }}
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=semver,pattern={{version}}
         labels: ${{ steps.meta.outputs.labels }}
         build-args: |
             BUILDTIME=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.created'] }}
