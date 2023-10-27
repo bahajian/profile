@@ -29,7 +29,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ steps.meta.outputs.bake-file }}
+        tags: ${{ steps.meta.outputs.json }}
 
 # id: meta
 #   uses: docker/metadata-action@v4
