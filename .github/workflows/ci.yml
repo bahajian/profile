@@ -29,7 +29,7 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ steps.meta.outputs.version }}
+        tags: ${{ steps.meta.outcome }}
 
 # id: meta
 #   uses: docker/metadata-action@v4
